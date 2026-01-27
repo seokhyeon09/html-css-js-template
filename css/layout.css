@@ -1,0 +1,331 @@
+.mob-nav-btn{
+    display: none;
+}
+
+.up-btn p{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: #C599FF;
+    border-radius: 999px;
+
+    text-align: center;
+    align-content: center;
+    z-index: 5;
+    color: #fff;
+
+    opacity: 0;
+    
+}
+header{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    transition: all 0.3s;
+}
+body.scroll header{
+    background-color: rgba(0,0,0,0.495);
+    transform: translateY(0);
+}
+body.scroll .up-btn p{
+    opacity: 1;
+}
+header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.nav-list{
+    display: flex;
+    gap: 24px;
+}
+.nav-list a{
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.sec-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(./../img/sec-1-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec-1 .tit-wrap .txt{
+    margin: 30px auto 50px;
+}
+.sec-1 .tit-wrap h2.tit + p.txt{
+    color: #fff;
+}
+.tit-wrap{
+    margin: 0 auto;
+    max-width: 1814px;
+    padding: 100px;
+}
+.sec-2 .circle{
+    position: absolute;
+    top: -50px;
+    left: 500px;
+    width: 140px;
+    height: 140px;
+    background-color: #DBDBDB;
+    border-radius: 999px;
+    z-index: -1;
+    /* circle 애니메이션을 3초동안 무한반복해서 한번끝나면 반대로 돌아가게 */
+    /* animation: circle 3s infinite alternate; */
+    animation: circle 3s infinite;
+}
+.sec-2 .circle::after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #C599FF;
+    top: -10px;
+    left: calc(50% - 10px);
+}
+@keyframes circle{
+    form{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.sec-2 .tit-wrap{
+    position: relative;
+   
+}
+.sec-2 .txt{
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+.sec-2-lst {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.sec-2-lst li{
+    background-color: #DBDBDB;
+    width: 259px;
+    height: 217px;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 4px 4px 0 rgba(59, 58, 58, 0.25);
+}
+.sec-2-lst a{
+    color: #000;;
+}
+.sec-2-lst h4{
+    font-size: 50px;
+}
+.sec-2-lst p{
+    font-size: 12px;
+}
+
+.sec-3{
+    position: relative;
+    display: flex;
+    max-width: 1814px;
+    margin: 0 auto;
+    background-color: #DBDBDB;
+}
+.sec-3 .tit-wrap{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-3 .img-wrap{
+    top: 0;
+    right: 0;
+    background-image: url(./../img/sec-3-bg.png);
+    background-size: cover;
+    min-height: 100vh;
+    width: 50%;
+}
+
+.sec-4{
+    padding: 200px 0;
+}
+.sec-4 .tit-wrap{
+    position: relative;
+}
+
+.sec-4 .tit-wrap a.btn{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sec-4-lst{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap:48px;
+}
+.sec-4-lst li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 350px;
+    background-color: #D8D8D8;
+    text-align: center;
+    padding: 20px;
+}
+.sec-4-lst li a h4{
+    font-size: 60px;
+}
+.sec-4-lst li:nth-child(even) a{
+    margin-top: 60px;
+}
+
+.sec-5{
+    position: relative;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7041FF;
+    background: linear-gradient(145deg, rgba(112, 65, 255, 1) 0%, rgba(186, 47, 177, 1) 100%);
+}
+.sec-5-menu{
+    position: absolute;
+    bottom: 30px;
+    left: 36%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+    z-index: 5;
+}
+.sec-5-menu li{
+    background-color: #C1B0E1;
+    
+    width: 100px;
+    height: 25%;
+}
+.sec-5-menu li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+.sec-5-menu li.active a{
+    background-color: #000;
+    color: #fff;
+}
+.sec-5-menu li.active a span:last-child{
+    color: yellow;
+}
+.sec-5-menu li a span:last-child{
+    text-transform: uppercase;
+}
+.sec-5-content-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sec-5-content-wrap .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.37);
+
+    z-index: 0;
+    opacity: 0;
+}
+.content.on{
+    z-index: 1;
+    opacity: 1;
+}
+.con-0{
+    background:url(./../img/sec-5-bg0.png) no-repeat center/cover;
+    background-size: 100%;
+}
+.con-1{
+    background:url(./../img/sec-5-bg1.png) no-repeat center/cover;
+    background-size: 100%;
+}
+.con-2{
+    background:url(./../img/sec-5-bg2.png) no-repeat center/cover;
+    background-size: 100%;
+}
+.con-3{
+    background:url(./../img/sec-5-bg3.png) no-repeat center/cover;
+    background-size: 100%;
+}
+.content h3{
+    font-size: 60px;
+    height: 73px;
+    margin-bottom: 20px;
+}
+.content p{
+    margin: 20px 0 30px;
+    font-size: 17px;
+}
+
+.content .btn{
+    display: inline-block;
+    
+    width: 145px;
+    height: 48px;
+    border-radius: 999px;
+    background-color: #000000;
+    align-content: center;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+
+footer{
+    background-color: #F1F1F1;
+    padding: 0 30px;
+
+}
+footer .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 114px;
+}
+.left-wrap h5{
+    font-size: 30px;
+    font-weight: 800;
+}
+.left-wrap p{
+    font-weight: 300;
+}
+.sns-wrap{
+    display: flex;
+    gap:24px;
+}

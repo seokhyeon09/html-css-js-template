@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* 폰트는 상속이 되는속성, 구글폰트검색 - 겟폰트 - 겟임베디드코드 - 웹 - @import */
+    font-family: "Roboto", sans-serif;
+    /* 넘치는 가로폭 숨기기, 세로폭을 숨기면 스크롤이안됨 */
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
