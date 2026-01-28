@@ -49,15 +49,34 @@ header .inner{
     text-transform: uppercase;
     font-size: 18px;
 }
-.sec-1{
+/* 배경 이미지 기본설정 */
+.sec-1 .gallery .swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+/* 각페이지별 배경이미지 */
+.sec-1 .gallery .swiper-slide.s01{
+    background-image: url(./../img/sec-1-bg1.png);
+}
+.sec-1 .gallery .swiper-slide.s02{
+    background-image: url(./../img/sec-1-bg2.jpg);
+}
+.sec-1 .gallery .swiper-slide.s03{
+    background-image: url(./../img/sec-1-bg3.jpg);
+}
+.sec-1 .gallery .swiper-slide.s04{
+    background-image: url(./../img/sec-1-bg4.jpg);
+}
+.sec-1 .gallery .inner{
+    /* 내용물 너비 높이 중앙정렬 */
+    max-width: 1400px;
+    height: 100%;
+    margin: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(./../img/sec-1-bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .sec-1 .tit-wrap .txt{
     margin: 30px auto 50px;
@@ -65,14 +84,22 @@ header .inner{
 .sec-1 .tit-wrap h2.tit + p.txt{
     color: #fff;
 }
-.tit-wrap{
-    margin: 0 auto;
-    max-width: 1814px;
-    padding: 100px;
+
+/* 하단 페이지네이션 변경(보지않는 페이지) */
+.sec-1 .gallery .swiper-pagination-bullet{
+    background-color: #ffffff;
+    opacity: 0.7;
 }
+/* 하단 페이지네이션 변경(보고있는 페이지) */
+.sec-1 .gallery .swiper-pagination-bullet-active{
+    background-color: #41ff4b;
+    width: 100px;
+    border-radius: 25px;
+}
+
 .sec-2 .circle{
     position: absolute;
-    top: -50px;
+    top: 50px;
     left: 500px;
     width: 140px;
     height: 140px;
@@ -206,8 +233,8 @@ header .inner{
 .sec-5-menu{
     position: absolute;
     bottom: 30px;
-    left: 36%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -234,11 +261,11 @@ header .inner{
     flex-direction: column;
 }
 .sec-5-menu li.active a{
-    background-color: #000;
+    background-color: #7044c2;
     color: #fff;
 }
 .sec-5-menu li.active a span:last-child{
-    color: yellow;
+    color: #ffffff;
 }
 .sec-5-menu li a span:last-child{
     text-transform: uppercase;
@@ -270,19 +297,19 @@ header .inner{
 }
 .con-0{
     background:url(./../img/sec-5-bg0.png) no-repeat center/cover;
-    background-size: 100%;
+    background-size: cover;
 }
 .con-1{
     background:url(./../img/sec-5-bg1.png) no-repeat center/cover;
-    background-size: 100%;
+    background-size: cover;
 }
 .con-2{
     background:url(./../img/sec-5-bg2.png) no-repeat center/cover;
-    background-size: 100%;
+    background-size: cover;
 }
 .con-3{
     background:url(./../img/sec-5-bg3.png) no-repeat center/cover;
-    background-size: 100%;
+    background-size: cover;
 }
 .content h3{
     font-size: 60px;

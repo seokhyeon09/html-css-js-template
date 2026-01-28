@@ -32,3 +32,8 @@ a.btn{
     text-transform: uppercase;
     border-radius: 47px;
 }
+.tit-wrap{
+    margin: 0 auto;
+    max-width: 1814px;
+    padding: 100px;
+}
