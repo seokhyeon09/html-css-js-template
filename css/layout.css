@@ -160,28 +160,85 @@ header .inner{
 .sec-3{
     position: relative;
     display: flex;
-    max-width: 1814px;
+    /* max-width: 1814px; */
     margin: 0 auto;
-    background-color: #DBDBDB;
+    height: 100vh;
+    width: 100vw;
+}
+.sec-3 .bg-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.sec-3 .bg-wrap>div{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+.sec-3 .bg-wrap>div.active{
+    opacity: 1;
+}
+.sec-3 .bg-wrap .bg-1{
+    background-color: #777777;
+}
+.sec-3 .bg-wrap .bg-2{
+    background-color: #EBD55A;
+}
+.sec-3 .bg-wrap .bg-3{
+    background-color: #E3FEE9;
+}
+.sec-3 .bg-wrap .bg-4{
+    background-color: #EEAB22;
 }
 .sec-3 .tit-wrap{
+    position: relative;
     width: 50%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     gap: 24px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
+.sec-3 .swiper-button-prev{
+    position: absolute;
+    left : 40%;
+    top:70%;
+}
+.sec-3 .swiper-button-next{
+    position: absolute;
+    right : 40%;
+    top:70%;
+}
 .sec-3 .img-wrap{
     top: 0;
     right: 0;
-    background-image: url(./../img/sec-3-bg.png);
-    background-size: cover;
     min-height: 100vh;
     width: 50%;
 }
+.sec-3 .sec-3-slider{
+    width: 100%;
+    height: 100%;
+}
+.sec-3 .sec-3-slider .swiper-wrapper .swiper-slide{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sec-3 .sec-3-slider .swiper-wrapper .swiper-slide.sl-1{
+    background-image: url(./../img/sec-3-bg1.png);
+}
+.sec-3 .sec-3-slider .swiper-wrapper .swiper-slide.sl-2{
+    background-image: url(./../img/sec-3-bg2.png);
+}
+.sec-3 .sec-3-slider .swiper-wrapper .swiper-slide.sl-3{
+    background-image: url(./../img/sec-3-bg3.png);
+}
+.sec-3 .sec-3-slider .swiper-wrapper .swiper-slide.sl-4{
+    background-image: url(./../img/sec-3-bg4.png);
+}
+
 
 .sec-4{
     padding: 200px 0;

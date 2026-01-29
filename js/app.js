@@ -1,5 +1,5 @@
 // alert("hello javascript")
-
+const bgWrap = document.querySelectorAll('.bg-wrap > div')
 const body = document.querySelector('body')
 const header = document.querySelector('header')
 const upBtn = document.querySelector('.up-btn')
@@ -18,15 +18,31 @@ var galleryswiper = new Swiper(".gallery", {
         prevEl: ".gallery .swiper-button-prev",
     },
     // 반복허용
-    loop:true,
+    loop: true,
     // 자동움직임
     // autoplay:true,
 });
-
+var swiper = new Swiper(".sec-3-slider", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+    on: {
+        activeIndexChange: function () {
+            const i = this.realIndex
+            console.log(`현재 index : ${i}`)
+            bgWrap.forEach((bg) => {
+                bg.classList.remove("active")
+            })
+            bgWrap[i].classList.add("active");
+        }
+    }
+});
 // 매개변수, 순번
 navList.forEach((btn, i) => {
     btn.addEventListener('click', (e) => {
-        //부드럽게 이동 윗줄의 ()안에 e도 들어가야함
+        //부드럽게 이동 윗줄의 ()안에 e도 들어가야함, a태그로인해 페이지가움직이는걸 막음
         e.preventDefault()
         console.log(document.querySelector(`#sec-${i + 1}`))
         document.querySelector(`#sec-${i + 1}`).scrollIntoView({
@@ -54,11 +70,12 @@ window.addEventListener('scroll', () => {
 })
 
 
-upBtn.addEventListener('click', () => {
+upBtn.addEventListener('click', (e) => {
+    e.preventDefault()
     window.scrollTo({
         top: 0,
-        behavior: 'smooth'
-    })
+        behavior: "smooth",
+    });
 })
 
 // menu클래스가 아니라 ul의 li값을 가져와야함

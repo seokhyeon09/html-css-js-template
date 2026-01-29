@@ -91,15 +91,15 @@
         justify-content: center;
         
     }
-    .sec-3{
-        background: url(./../img/sec-3-bg.png) no-repeat center/cover;
-    }
     .sec-3 .img-wrap{
-        display: none;
+        width: 100%;
     }
     .sec-3 .tit-wrap{
+        position: absolute;
         background-color: transparent;
-        width: 100%;
         color: #fff;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
     }
 }
