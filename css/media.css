@@ -1,97 +1,112 @@
 @media screen and (max-width : 1640px) {
-    header .inner{
+    header .inner {
         padding: 20px;
     }
-    .inner{
+
+    .inner {
         padding: 0 20px;
     }
 }
+
 @media screen and (max-width : 1440px) {
-     .mob-nav-btn{
+    .mob-nav-btn {
         display: block;
         width: 30px;
         height: 20px;
 
         position: relative;
     }
-    .mob-nav-btn span{
+
+    .mob-nav-btn span {
         display: block;
         width: 100%;
         height: 3px;
         background-color: #fff;
-        
+
         position: absolute;
 
         transition: all .3s;
     }
-    .mob-nav-btn span:nth-child(1){
-        top:0;
-    }
-    .mob-nav-btn span:nth-child(2){
-        top:48%;
-    }
-    .mob-nav-btn span:nth-child(3){
-        top:99%;
-    }
-    
 
-    header .nav-list{
+    .mob-nav-btn span:nth-child(1) {
+        top: 0;
+    }
+
+    .mob-nav-btn span:nth-child(2) {
+        top: 48%;
+    }
+
+    .mob-nav-btn span:nth-child(3) {
+        top: 99%;
+    }
+
+
+    header .nav-list {
         position: fixed;
         top: 80px;
         right: -100%;
         flex-direction: column;
-        
-        background-color: rgba(0,0,0, 0.589);
-        
+
+        background-color: rgba(0, 0, 0, 0.589);
+
         gap: 12px;
-        
+
         padding: 20px;
-        
+
         width: 200px;
         text-align: center;
 
         transition: right .3s;
     }
-    
-    .nav-list li +li{
+
+    .nav-list li+li {
         border-top: 1px solid #ffffff;
     }
-    .nav-list li a{
+
+    .nav-list li a {
         padding-top: 10px;
     }
-    
-    body.mob-nav-open .nav-list{
+
+    body.mob-nav-open .nav-list {
         right: 0;
     }
-    body.mob-nav-open span:nth-child(1){
+
+    body.mob-nav-open span:nth-child(1) {
         top: 48%;
         transform: rotate(45deg);
     }
-    body.mob-nav-open span:nth-child(2){
-        transform:  translateX(100%);
+
+    body.mob-nav-open span:nth-child(2) {
+        transform: translateX(100%);
         opacity: 0;
     }
-    body.mob-nav-open span:nth-child(3){
+
+    body.mob-nav-open span:nth-child(3) {
         top: 48%;
         transform: rotate(-45deg);
     }
-    .tit-wrap{
+
+    .tit-wrap {
         padding: 0;
         /* text-align: center; */
     }
-    .tit{
+
+    .tit {
         text-align: center;
     }
-    .txt{
+
+    .txt {
         margin: 0 auto;
-        
+
     }
-    .sec-2-lst{
+
+    .sec-2-lst {
         align-items: center;
         justify-content: center;
-        
+
     }
-    .sec-3 .img-wrap{
+
+    /* .sec-3 .img-wrap{
         width: 100%;
     }
     .sec-3 .tit-wrap{
@@ -101,5 +116,121 @@
         height: 100%;
         width: 100%;
         z-index: 3;
+    } */
+    .sec-3 {
+        background: url(../img/sec-3-bg1.png) no-repeat center/cover;
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .sec-3 .img-wrap {
+        width: 100%;
+    }
+
+    .sec-3 .tit-wrap {
+        background: transparent;
+        width: 100%;
+    }
+
+    .sec-3-slider .swiper-slide .num {
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+    }
+
+    .sec-4-lst li a {
+        width: 100%;
+    }
+
+    .sec-4-lst li a h4 {
+        font-size: 50px;
+    }
+
+}
+
+@media screen and (max-width : 1024px) {
+    .sec-4-lst {
+        margin-top: 100px;
+        flex-wrap: wrap;
+    }
+
+    .sec-4-lst li {
+        width: 40%;
+    }
+
+    .sec-4-lst li:nth-child(even) a {
+        margin-top: -60px;
+    }
+
+    .sec-5-menu {
+        width: 80%;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    .sec-5-menu li {
+        width: 48%;
+        height: 70px;
+    }
+
+    .sec-5-menu li a {
+        min-width: 0;
+    }
+
+    footer .inner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+
+    }
+}
+
+@media screen and (max-width : 699px) {
+
+    .sec-1 .swiper-button-prev,
+    .sec-1 .swiper-button-next {
+        display: none;
+    }
+
+    /* 3섹션 .num figma디자인과 동일하게 만들어보기*/
+    .sec-3 .swiper {
+        overflow: unset;
+    }
+
+    .sec-3-slider .swiper-slide .num {
+        position: absolute;
+        right: 50%;
+        bottom: 100%;
+        width: 200px;
+        height: 200px;
+        align-content: center;
+        text-align: center;
+        font-size: 100px;
+        border-radius: 200px;
+        box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.322);
+        z-index: 5;
+    }
+
+    .sec-4 .tit-wrap a.btn {
+        position: static;
+        transform: translateY(0);
+        margin-top: 30px;
+    }
+
+    .sec-4-lst li {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .sec-4-lst li a {
+        max-width: 100%;
+    }
+
+    .sec-4-lst li:nth-child(even) a {
+        margin-top: 0px;
     }
 }
